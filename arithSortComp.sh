@@ -9,6 +9,7 @@ read -p "Enter the num c : " c
 comp1=$(($a+$b*$c))
 comp2=$(($a*$b+$c))
 comp3=$(($a%$b+$c))
+comp4=$(($c+$a/$b))
 
 
 
