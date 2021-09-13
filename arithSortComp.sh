@@ -20,12 +20,27 @@ result["4"]=$comp4
 
 num=0
 
-declare -a resultPrint
+declare -a resultArray
 
 while [ $num -lt 4 ]
-do 
-	resultPrint[((num++))]=${result[$num]}
+do
+	resultArray[((num++))]=${result[$num]}
 done
+
+for (( i=0; i<4; i++ ))
+do
+        for (( j=i+1; j<4; j++ ))
+        do
+                if [ "${resultArray[i]}" -lt "${resultArray[j]}" ]
+                then
+                        temp=${resultArray[i]}
+                        resultArray[i]=${resultArray[j]}
+                        resultArray[j]=$temp;
+                fi
+        done
+done
+
+echo ${resultArray[*]}
 
 
 
