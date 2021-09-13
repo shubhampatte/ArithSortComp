@@ -18,6 +18,15 @@ result["2"]=$comp2
 result["3"]=$comp3
 result["4"]=$comp4
 
+num=0
+
+declare -a resultPrint
+
+while [ $num -lt 4 ]
+do 
+	resultPrint[((num++))]=${result[$num]}
+done
+
 
 
 
