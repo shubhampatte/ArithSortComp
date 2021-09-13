@@ -1,3 +1,5 @@
 #! /bin/bash/ -x
 
-echo "Welcome to Arithmetic Sorting Problem"
+read -p "Enter the num a : " a
+read -p "Enter the num b : " b
+read -p "Enter the num c : " c
